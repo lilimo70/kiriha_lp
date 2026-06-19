@@ -15,7 +15,8 @@
   --content-width-wide: 1440px;
   --font-serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-  --font-en: "Cormorant Garamond", Georgia, serif;
+  --font-en: Avenir, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-logo: "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
 * {
@@ -84,6 +85,7 @@ button {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
 .hero__title,
@@ -158,6 +160,7 @@ button {
   padding-top: 7px;
   font-family: var(--font-en);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.14em;
 }
 
@@ -183,8 +186,9 @@ button {
 }
 
 .logo__main {
-  font-family: var(--font-en);
+  font-family: var(--font-logo);
   font-size: 32px;
+  font-weight: 400;
   letter-spacing: 0.28em;
   text-indent: 0.28em;
 }
@@ -192,6 +196,7 @@ button {
 .logo__sub {
   font-family: var(--font-en);
   font-size: 8px;
+  font-weight: 600;
   letter-spacing: 0.32em;
   text-indent: 0.32em;
 }
@@ -328,6 +333,7 @@ button {
   padding: 0;
   font-family: var(--font-en);
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   transform: rotate(180deg);
   transform-origin: center;
@@ -419,13 +425,13 @@ button {
   align-items: baseline;
   gap: 16px;
   margin-bottom: 22px;
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   letter-spacing: 0.12em;
 }
 
 .scent-card__title h3 {
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .scent-card__title > span:first-child {
@@ -439,8 +445,9 @@ button {
 
 .scent-card__tone {
   margin-bottom: 12px;
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.18em;
 }
 
@@ -480,7 +487,7 @@ button {
   border-left: 5px solid var(--color-green);
   font-family: var(--font-en);
   font-size: clamp(24px, 2vw, 34px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.14em;
 }
@@ -721,20 +728,33 @@ button {
   gap: 12px;
   font-family: var(--font-en);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.14em;
 }
 
 .footer__nav--sub {
-  font-family: var(--font-serif);
+  font-family: var(--font-en);
   letter-spacing: 0.08em;
 }
 
 .footer__copyright {
-  padding: 18px 24px;
+  padding: 18px 24px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   font-family: var(--font-en);
   font-size: 9px;
+  font-weight: 500;
   letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.footer__notice {
+  margin-top: 12px;
+  padding: 0 24px 24px;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
   text-align: center;
 }
 
