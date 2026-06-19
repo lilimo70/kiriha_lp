@@ -631,12 +631,24 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 82px;
-  padding: 0 6px;
+  min-height: 112px;
+  padding: 0 8px;
   border: 0;
   background: transparent;
   cursor: pointer;
+  font-size: clamp(18px, 1.85vw, 36px);
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
   text-align: left;
+}
+
+.faq-item__question-text {
+  padding-right: 36px;
+}
+
+.faq-item__label {
+  font-weight: 600;
 }
 
 .faq-item__icon {
@@ -675,7 +687,16 @@ button {
 }
 
 .faq-item__answer p {
-  padding: 0 44px 28px 28px;
+  padding: 2px 52px 38px 34px;
+  font-size: clamp(15px, 1.2vw, 23px);
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
+
+.faq-item__answer-label {
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 /* Contact CTA */
@@ -1003,14 +1024,16 @@ button {
   }
 
   .faq-item__question {
-    min-height: 72px;
+    min-height: 86px;
     gap: 20px;
-    font-size: 12px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.75;
   }
 
   .faq-item__answer p {
-    padding: 0 28px 24px 12px;
+    padding: 0 28px 28px 12px;
+    font-size: 14px;
+    line-height: 1.9;
   }
 
   .cta {
