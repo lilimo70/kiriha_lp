@@ -129,7 +129,7 @@ button {
 }
 
 .button--light:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   color: var(--color-green);
 }
 
@@ -222,7 +222,7 @@ button {
   z-index: 1;
   width: min(calc(100% - 96px), var(--content-width-wide));
   margin: 0 auto;
-  padding-top: 275px;
+  padding-top: 225px;
 }
 
 .hero__title {
@@ -827,7 +827,7 @@ button {
 
   .hero__content {
     width: calc(100% - 40px);
-    padding-top: 190px;
+    padding-top: 140px;
   }
 
   .hero__title {
