@@ -15,7 +15,7 @@
   --content-width-wide: 1440px;
   --font-serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-  --font-en: Avenir, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-en: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-logo: "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
