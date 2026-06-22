@@ -4,6 +4,8 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu__nav a');
 const pageTopButton = document.querySelector('.page-top');
 
+const isMenuOpen = () => menuButton?.getAttribute('aria-expanded') === 'true';
+
 const setMenuOpen = (isOpen, returnFocus = false) => {
   if (!header || !menuButton || !mobileMenu) {
     return;
@@ -19,29 +21,6 @@ const setMenuOpen = (isOpen, returnFocus = false) => {
     menuButton.focus();
   }
 };
-
-menuButton?.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  setMenuOpen(!isOpen);
-});
-
-mobileMenuLinks.forEach((link) => {
-  link.addEventListener('click', () => setMenuOpen(false));
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
-    setMenuOpen(false, true);
-  }
-});
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 1024 && menuButton?.getAttribute('aria-expanded') === 'true') {
-    setMenuOpen(false);
-  }
-
-  updateHeaderState();
-});
 
 const updateHeaderState = () => {
   if (!header) {
@@ -62,6 +41,33 @@ const updatePageTopButton = () => {
   pageTopButton.setAttribute('aria-hidden', String(!isVisible));
 };
 
+const updateScrollState = () => {
+  updateHeaderState();
+  updatePageTopButton();
+};
+
+menuButton?.addEventListener('click', () => {
+  setMenuOpen(!isMenuOpen());
+});
+
+mobileMenuLinks.forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && isMenuOpen()) {
+    setMenuOpen(false, true);
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1024 && isMenuOpen()) {
+    setMenuOpen(false);
+  }
+
+  updateHeaderState();
+});
+
 pageTopButton?.addEventListener('click', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -70,11 +76,6 @@ pageTopButton?.addEventListener('click', () => {
     behavior: reduceMotion ? 'auto' : 'smooth'
   });
 });
-
-const updateScrollState = () => {
-  updateHeaderState();
-  updatePageTopButton();
-};
 
 window.addEventListener('scroll', updateScrollState, { passive: true });
 updateScrollState();

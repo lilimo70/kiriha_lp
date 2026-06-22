@@ -919,7 +919,6 @@ button {
   }
 
   .header {
-    position: fixed;
     z-index: 30;
     height: 64px;
     background: rgba(250, 247, 240, 0.86);
@@ -1082,14 +1081,6 @@ button {
     transform-origin: left center;
   }
 
-  .mobile-menu__nav a span {
-    color: var(--color-muted);
-    font-family: var(--font-en);
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-  }
-
   .hero {
     display: flex;
     flex-direction: column;
@@ -1161,7 +1152,6 @@ button {
     width: min(calc(100% - 50px), 520px);
     height: 620px;
     min-height: 0;
-    margin: 0 auto;
   }
 
   .concept__vertical {
@@ -1223,11 +1213,6 @@ button {
     text-indent: 0.3em;
   }
 
-  .footer__nav {
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1254,9 +1239,7 @@ button {
     max-width: 360px;
     margin-bottom: 26px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
   .scent {
     min-height: auto;
     padding: 96px 0 104px;
@@ -1267,9 +1250,7 @@ button {
   }
 
   .scent__cards {
-    grid-template-columns: 1fr;
     gap: 24px;
-    max-width: 720px;
   }
 }
 
@@ -1288,7 +1269,6 @@ button {
 
   .section-title {
     font-size: 27px;
-    line-height: 1.65;
   }
 
   .eyebrow {
@@ -1306,7 +1286,6 @@ button {
 
   .mobile-menu {
     padding: clamp(18px, 4vh, 28px) 20px 24px;
-    background: rgba(248, 243, 233, 0.97);
   }
 
   .mobile-menu__nav a {
@@ -1314,15 +1293,6 @@ button {
     gap: 18px;
     padding: clamp(13px, 2vh, 16px) 4px;
     font-size: 20px;
-    line-height: 1.5;
-  }
-
-  .mobile-menu__nav a span {
-    font-size: 11px;
-  }
-
-  .hero {
-    min-height: 0;
   }
 
   .hero__picture {
@@ -1334,7 +1304,6 @@ button {
   }
 
   .hero__content {
-    width: 100%;
     padding: 44px 20px 52px;
   }
 
@@ -1395,12 +1364,6 @@ button {
   .concept__visual {
     width: min(100%, 440px);
     height: 520px;
-    min-height: 0;
-    margin: 0 auto;
-  }
-
-  .concept__vertical {
-    display: none;
   }
 
   .scent {
@@ -1421,7 +1384,6 @@ button {
   }
 
   .scent__cards {
-    grid-template-columns: 1fr;
     gap: 14px;
   }
 
@@ -1460,19 +1422,8 @@ button {
   }
 
   .product__grid {
-    grid-template-columns: 1fr;
     gap: 52px;
     padding: 0;
-  }
-
-  .product__image {
-    height: auto;
-    aspect-ratio: 0.81;
-  }
-
-  .product__notes > img {
-    height: auto;
-    aspect-ratio: 1 / 0.96;
   }
 
   .material__grid {
@@ -1525,7 +1476,6 @@ button {
   }
 
   .footer__grid {
-    column-gap: clamp(32px, 10vw, 48px);
     row-gap: 40px;
     width: min(calc(100% - 64px), 360px);
     min-height: 280px;
