@@ -8,23 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=25">
+  <link rel="stylesheet" href="css/style.css?v=34">
 </head>
 <body>
   <header class="header">
     <nav class="header__nav" aria-label="メインナビゲーション">
       <div class="header__links header__links--left">
         <a href="#brand-story">BRAND</a>
-        <a href="#scent">SCENT</a>
-        <a href="#material">STORY</a>
+        <a href="#concept">CONCEPT</a>
       </div>
       <a class="logo" href="#top" aria-label="KIRIHA トップへ">
         <span class="logo__main">KIRIHA</span>
         <span class="logo__sub">HOME FRAGRANCE</span>
       </a>
       <div class="header__links header__links--right">
-        <a href="#products">LINEUP</a>
-        <a href="#material">NOTE</a>
+        <a href="#scent">LINEUP</a>
+        <a href="#material">STORY</a>
         <a href="#faq">FAQ</a>
       </div>
       <button class="header__menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
@@ -33,16 +32,16 @@
         <span></span>
       </button>
     </nav>
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <nav class="mobile-menu__nav" aria-label="スマートフォンメニュー">
-        <a href="#top"><span>01</span>はじめへ</a>
-        <a href="#scent"><span>02</span>香りについて</a>
-        <a href="#products"><span>03</span>商品について</a>
-        <a href="#material"><span>04</span>ストーリー</a>
-        <a href="#faq"><span>05</span>よくあるご質問</a>
-      </nav>
-    </div>
   </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="スマートフォンメニュー">
+      <a href="#brand-story">BRAND</a>
+      <a href="#concept">CONCEPT</a>
+      <a href="#scent">LINEUP</a>
+      <a href="#material">STORY</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
 
   <main>
     <section class="hero" id="top">
@@ -85,18 +84,16 @@
     <section class="concept section" id="concept">
       <div class="container concept__grid">
         <div class="concept__content">
-          <div>
-            <p class="eyebrow">PRODUCT CONCEPT</p>
-            <h2 class="section-title">香りも、佇まいも、<br>空間になじむように。</h2>
-            <div class="body-copy">
-              <p>木製キャップと控えめなラベル、静かにたたずむガラスのかたち。</p>
-              <p>KIRIHAは、香りだけでなく、目に入ったときの美しさにも心を配りました。</p>
-              <p>置く場所を選ばず、玄関や寝室、リビングにも自然になじみ、インテリアの一部として、暮らしの風景にそっと溶け込むデザインです。</p>
-            </div>
+          <p class="eyebrow">PRODUCT CONCEPT</p>
+          <h2 class="section-title">香りも、佇まいも、<br>空間になじむように。</h2>
+          <div class="body-copy">
+            <p>木製キャップと控えめなラベル、静かにたたずむガラスのかたち。</p>
+            <p>KIRIHAは、香りだけでなく、目に入ったときの美しさにも心を配りました。</p>
+            <p>置く場所を選ばず、玄関や寝室、リビングにも自然になじみ、インテリアの一部として、暮らしの風景にそっと溶け込むデザインです。</p>
           </div>
-          <div class="concept__shadow">
-            <img src="images/product-concept-shadow.jpg" alt="やわらかな木漏れ日の影">
-          </div>
+        </div>
+        <div class="concept__shadow">
+          <img src="images/product-concept-shadow.jpg" alt="やわらかな木漏れ日の影">
         </div>
         <div class="concept__visual">
           <img src="images/product-concept-main.jpg" alt="木製キャップをあしらったKIRIHAのフレグランスボトル">
@@ -236,10 +233,7 @@
     <div class="container footer__grid">
       <a class="logo logo--footer" href="#top"><span class="logo__main">KIRIHA</span><span class="logo__sub">HOME FRAGRANCE</span></a>
       <nav class="footer__nav" aria-label="フッターナビゲーション">
-        <a href="#brand-story">ABOUT</a><a href="#scent">SCENT</a><a href="#material">STORY</a><a href="#material">JOURNAL</a><a href="#faq">FAQ</a>
-      </nav>
-      <nav class="footer__nav footer__nav--sub" aria-label="ショップ情報">
-        <a href="#products">Shop List</a><a href="#products">Gift</a><a href="#faq">FAQ / Magazine</a>
+        <a href="#brand-story">BRAND</a><a href="#concept">CONCEPT</a><a href="#scent">LINEUP</a><a href="#material">STORY</a><a href="#faq">FAQ</a>
       </nav>
     </div>
     <p class="footer__copyright">© 2026 KIRIHA. All rights reserved.</p>
@@ -249,6 +243,6 @@
     <span aria-hidden="true">↑</span>
   </button>
   <script src="js/main.js"></script>
-  <script src="js/navigation.js?v=2"></script>
+  <script src="js/navigation.js?v=4"></script>
 </body>
 </html>

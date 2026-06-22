@@ -39,7 +39,18 @@ window.addEventListener('resize', () => {
   if (window.innerWidth >= 1024 && menuButton?.getAttribute('aria-expanded') === 'true') {
     setMenuOpen(false);
   }
+
+  updateHeaderState();
 });
+
+const updateHeaderState = () => {
+  if (!header) {
+    return;
+  }
+
+  const isScrolled = window.innerWidth >= 1024 && window.scrollY > 40;
+  header.classList.toggle('header--scrolled', isScrolled);
+};
 
 const updatePageTopButton = () => {
   if (!pageTopButton) {
@@ -60,5 +71,10 @@ pageTopButton?.addEventListener('click', () => {
   });
 });
 
-window.addEventListener('scroll', updatePageTopButton, { passive: true });
-updatePageTopButton();
+const updateScrollState = () => {
+  updateHeaderState();
+  updatePageTopButton();
+};
+
+window.addEventListener('scroll', updateScrollState, { passive: true });
+updateScrollState();
