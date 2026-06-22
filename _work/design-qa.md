@@ -1,9 +1,9 @@
 # Design QA
 
-- Source visual truth: `/Users/user/GitHub/kiriha_lp/1920w light.jpg`
+- Source visual truth: `/Users/user/GitHub/kiriha_lp/_work/1920w light.jpg`
 - Implementation URL: `http://127.0.0.1:8000/`
-- Existing desktop evidence: `/Users/user/GitHub/kiriha_lp/_qa-implementation-top.png`
-- Existing source/desktop comparison: `/Users/user/GitHub/kiriha_lp/_qa-comparison-top.jpg`
+- Existing desktop evidence: `/Users/user/GitHub/kiriha_lp/_work/_qa-implementation-top.png`
+- Existing source/desktop comparison: `/Users/user/GitHub/kiriha_lp/_work/_qa-comparison-top.jpg`
 - Responsive verification: live browser layout metrics at 375, 430, 768, 1024, and 1440px
 - State: default page, responsive navigation closed
 
